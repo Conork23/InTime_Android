@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_request_test"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.intimealarm.conor.intime_app.EvaluationActivity"
+    android:orientation="vertical">
+
+    <!-- is Public -->
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/typeGroup">
+
+        <TextView
+            android:text="Type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:layout_weight="1"/>
+
+        <RadioButton
+            android:text="Public"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/publicRadio"
+            android:layout_weight="1"
+            android:checked="true" />
+
+        <RadioButton
+            android:text="Private"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/privateRadio"
+            android:layout_weight="1"
+            android:checked="true" />
+    </RadioGroup>
+
+    <!--From Location-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_marginStart="15dp"
+            android:text="@string/from_spinner_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eval_from_spinner_lbl"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <Spinner
+            android:id="@+id/eval_from_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:minHeight="40dp"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!--To Location-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_marginStart="15dp"
+            android:text="@string/to_spinner_lbl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/eval_to_spinner_lbl"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <Spinner
+            android:id="@+id/eval_to_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:minHeight="40dp"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.AppCompat.Spinner.Underlined"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!--Start-->
+    <Button
+        android:text="@string/eval_start"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/startBtn" />
+
+    <!--Stop-->
+    <Button
+        android:text="@string/eval_stop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/stopBtn" />
+
+</LinearLayout>

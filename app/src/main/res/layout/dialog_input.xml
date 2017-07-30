@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Edit Text Field for Changing Location Lbl-->
+    <EditText
+        android:id="@+id/label_change_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/change_label_hint"
+        android:inputType="text|textCapWords"
+        android:lines="1"
+        android:singleLine="true" />
+
+</RelativeLayout>

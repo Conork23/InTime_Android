@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <!--isActive Button-->
+    <ImageButton
+        app:srcCompat="@android:drawable/ic_lock_power_off"
+        android:id="@+id/btn_active"
+        android:paddingTop="5dp"
+        android:padding="5dp"
+        android:contentDescription="@string/is_active_content_desc"
+        android:layout_gravity="center"
+        android:layout_width="60dp"
+        android:layout_height="70dp"
+        android:tint="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"/>
+
+    <!--Active Days-->
+    <LinearLayout
+        android:id="@+id/days"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tf_time"
+        android:layout_toEndOf="@+id/btn_active"
+        android:layout_alignEnd="@id/tf_time">
+
+            <TextView
+                android:text="@string/placeholder_active_day_m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_active_day_m"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textStyle="bold" />
+            <TextView
+                android:text="@string/placeholder_active_day_tu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_active_day_tu"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="@string/placeholder_active_day_w"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_active_day_w"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="@string/placeholder_active_day_th"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_active_day_th"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="@string/placeholder_active_day_f"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_active_day_f"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="@string/placeholder_active_day_sa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_active_day_sa"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+            <TextView
+                android:text="@string/placeholder_active_day_su"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tf_active_day_su"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_weight="1"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+    <!--Destinations-->
+    <TextView
+        android:text="@string/placeholder_alarm_locations"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tf_location"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_toEndOf="@+id/tf_time"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/days"
+        android:layout_alignParentTop="true" />
+
+    <!--Activation Time-->
+    <TextView
+        android:text="@string/placeholder_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tf_time"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:paddingTop="10dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/btn_active" />
+
+</RelativeLayout>

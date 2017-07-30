@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_alarm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.intimealarm.conor.intime_app.AddAlarmActivity">
+
+
+    <!--Header-->
+    <RelativeLayout
+        android:id="@+id/timeHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:text="@string/current_set_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textColor="@color/white"
+            />
+
+        <TextView
+            android:text="@string/placeholder_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:id="@+id/add_alarm_time"
+            android:textSize="48sp"
+            android:textColor="@color/white"
+            android:layout_below="@id/textView3"/>
+
+        <Button
+            android:text="@string/change_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_change_btn"
+            android:layout_alignTop="@+id/add_alarm_time"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:textSize="16sp"
+            style="@style/Widget.AppCompat.Button.Colored"
+            />
+    </RelativeLayout>
+
+    <!--Save Button-->
+    <Button
+        android:text="@string/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_save_btn"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:textSize="16sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <!--Smart Alarm Options-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeHeader"
+        android:layout_above="@id/add_save_btn"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--Repeat Option-->
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/days_layout"
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/days_lbl">
+
+                <Button
+                    android:text="@string/placeholder_active_day_m"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_m"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:background="@color/transparent" />
+                <Button
+                    android:text="@string/placeholder_active_day_tu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_tu"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                <Button
+                    android:text="@string/placeholder_active_day_w"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_w"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                <Button
+                    android:text="@string/placeholder_active_day_th"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_th"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+                <Button
+                    android:text="@string/placeholder_active_day_f"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_f"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                <Button
+                    android:text="@string/placeholder_active_day_sa"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_sa"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                <Button
+                    android:text="@string/placeholder_active_day_su"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btn_su"
+                    android:layout_weight="1"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+            </LinearLayout>
+            <TextView
+                android:layout_marginStart="15dp"
+                android:text="@string/repeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/days_lbl"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/days_layout"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@id/days_layout"
+                android:gravity="center_vertical"/>
+
+            <!--Is Smart-->
+            <RadioGroup
+                android:id="@+id/rg_smart_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/days_layout"
+                android:layout_toEndOf="@+id/smart_alarm_lbl"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp">
+
+                <RadioButton
+                    android:text="@string/radio_smart_yes_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_smart_yes"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="@string/radio_smart_no_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_smart_no"
+                    android:checked="true"
+                    android:layout_weight="1" />
+            </RadioGroup>
+            <TextView
+                android:layout_marginStart="15dp"
+                android:text="@string/lbl_smart_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/smart_alarm_lbl"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/rg_smart_alarm"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@id/rg_smart_alarm"
+                android:gravity="center_vertical"/>
+
+            <!-- Is Public-->
+            <RadioGroup
+                android:id="@+id/rg_ispublic_alarm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/rg_smart_alarm"
+                android:layout_toEndOf="@+id/ispublic_alarm_lbl"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:text="@string/radio_ispublic_yes_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_ispublic_yes"
+                    android:checked="true"
+                    android:layout_weight="1" />
+
+                <RadioButton
+                    android:text="@string/radio_ispublic_no_string"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radio_ispublic_no"
+                    android:layout_weight="1" />
+            </RadioGroup>
+            <TextView
+                android:layout_marginStart="15dp"
+                android:text="@string/ispublic_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ispublic_alarm_lbl"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/rg_ispublic_alarm"
+                android:layout_alignParentStart="true"
+                android:layout_alignEnd="@id/smart_alarm_lbl"
+                android:layout_alignTop="@id/rg_ispublic_alarm"
+                android:gravity="center_vertical"
+                android:visibility="gone"/>
+
+            <!--Public Transport Modes-->
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@+id/rg_ispublic_alarm"
+                android:id="@+id/tmodes_cb"
+                android:layout_toEndOf="@+id/tmodes_lbl"
+                android:layout_alignParentEnd="true"
+                android:visibility="gone">
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder_bus"
+                    android:id="@+id/busCB"
+                    android:checked="true"/>
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder_train"
+                    android:id="@+id/trainCB"
+                    android:checked="true"/>
+
+                <CheckBox
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/placeholder_tram"
+                    android:id="@+id/tramCB"
+                    android:checked="true"/>
+
+            </LinearLayout>
+            <TextView
+                android:layout_marginStart="15dp"
+                android:text="@string/tmodes_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@id/tmodes_lbl"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/tmodes_cb"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@id/tmodes_cb"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_alignEnd="@+id/ispublic_alarm_lbl" />
+
+            <!--From Location-->
+            <Spinner
+                android:id="@+id/from_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tmodes_cb"
+                android:layout_toEndOf="@+id/from_spinner_lbl"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:minHeight="40dp"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:visibility="gone"/>
+            <TextView
+                android:layout_marginStart="15dp"
+                android:text="@string/from_spinner_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/from_spinner_lbl"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/from_spinner"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@id/from_spinner"
+                android:layout_alignEnd="@+id/due_time_lbl"
+                android:gravity="center_vertical"
+                android:visibility="gone"/>
+
+            <!--To Location-->
+            <Spinner
+                android:id="@+id/to_spinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/from_spinner"
+                android:layout_toEndOf="@+id/to_spinner_lbl"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:minHeight="40dp"
+                android:layout_marginTop="16dp"
+                style="@style/Widget.AppCompat.Spinner.Underlined"
+                android:visibility="gone"/>
+            <TextView
+                android:layout_marginStart="15dp"
+                android:text="@string/to_spinner_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/to_spinner_lbl"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/to_spinner"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@id/to_spinner"
+                android:gravity="center_vertical"
+                android:layout_alignEnd="@+id/due_time_lbl"
+                android:visibility="gone"/>
+
+            <!--Prep Time-->
+            <EditText
+                android:id="@+id/prepTime_et"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/to_spinner"
+                android:layout_toEndOf="@+id/prepTime_lbl"
+                android:layout_marginEnd="16dp"
+                android:inputType="number"
+                android:visibility="gone"
+                android:hint="@string/preptime_hint"
+                />
+            <TextView
+                android:layout_marginStart="15dp"
+                android:text="@string/prepTime_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@id/prepTime_lbl"
+                android:textColor="@color/black"
+                android:layout_alignBottom="@id/prepTime_et"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@id/prepTime_et"
+                android:gravity="center_vertical"
+                android:visibility="gone"
+                android:layout_toStartOf="@+id/tmodes_cb" />
+
+            <!--Due Time-->
+            <Button
+                android:text="@string/change_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/prepTime_et"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:id="@+id/btn_due_time"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:visibility="gone"/>
+            <TextView
+                android:text="@string/placeholder_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/btn_due_time"
+                android:layout_alignTop="@id/btn_due_time"
+                android:layout_toStartOf="@+id/btn_due_time"
+                android:id="@+id/due_time_tv"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:layout_toEndOf="@+id/due_time_lbl"
+                android:layout_marginStart="26dp"
+                android:visibility="gone" />
+            <TextView
+                android:text="@string/due_time_lbl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/due_time_lbl"
+                android:layout_alignBottom="@+id/btn_due_time"
+                android:layout_alignTop="@id/btn_due_time"
+                android:layout_alignParentStart="true"
+                android:gravity="center_vertical"
+                android:textColor="@color/black"
+                android:layout_marginStart="15dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

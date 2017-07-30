@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.intimealarm.conor.intime_app.MainActivity">
+
+    <!--Uncomment to enable evaluation button-->
+    <!--<item-->
+        <!--android:id="@+id/action_evaluation"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/test_service_call"-->
+        <!--app:showAsAction="never" />-->
+
+    <!--My Locations Page Button-->
+    <item
+        android:id="@+id/action_locations"
+        android:orderInCategory="99"
+        android:title="@string/my_locations"
+        app:showAsAction="ifRoom" />
+
+</menu>

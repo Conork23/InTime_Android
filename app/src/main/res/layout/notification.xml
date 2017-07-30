@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--App Logo-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"
+        android:id="@+id/logoView"
+        android:layout_weight="1"/>
+
+    <!--App Name-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notification_app_name"
+        android:gravity="center_vertical"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:layout_weight="2"/>
+
+    <!--Stop Button-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notification_btn"
+        android:id="@+id/notificationBtn"
+        android:textColor="@color/white"
+        android:background="@drawable/button"
+        android:layout_weight="1"
+        android:layout_marginEnd="5dp"
+        />
+
+</LinearLayout>
